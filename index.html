@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
+  <title></title>
+</head>
+
+<body>
+  <header class="header-container">
+
+  </header>
+  <main class="container">
+    <div class="main-background">
+      <div class="content-container">
+        <div class="select-container">
+          <ul class="select-list">
+            <li class="select-list-item " onclick="onHairdresserSelect()">
+              <a id="heardresser-a" class=" a-tag active" href="#">Kirpejoms</a>
+            </li>
+            <li class="select-list-item" onclick="onClientSelect()">
+              <a id="client-a" class="a-tag" href="#">Klientams</a>
+            </li>
+          </ul>
+          <div class="for-hairdresser display-block" id="hairdresserContentId">
+            <div class="dropdown-container">
+              <div class="reservation-list-container border" id="reservationListItem" onclick="openDropdown()">
+                <i class="fas fa-list-ul"></i>
+                <div class="reservation-list-item ">Reservacijų sąrašas</div>
+              </div>
+              <div class="dropdown-content display-none" id="reservationDropdown">
+                <p class="title"><i class="fas fa-list-ul"></i>Pasirinkti datą</p>
+                <div class="data-container">
+                  <div class="data border" id="todayBtn">Šiandien</div>
+                  <div class="data border" id="tomorrowBtn">Rytoj</div>
+                </div>
+                <div class="data-container ">
+                  <div class="select-data border" id="selectDataBtn">Kita data</div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-container">
+              <div class="reservation-list-container border" id="reservation" onclick="openDropdown2()">
+                <i class="fas fa-calendar-week"></i>
+                <div class="reservation-list-item">Atlikti arba atšaukti rezervaciją</div>
+              </div>
+              <div class="dropdown-content display-none" id="makeApointment">
+                <p class="title"><i class="fas fa-calendar-week"></i>Pasirinkti veiksmą</p>
+                <div class="data-container">
+                  <div class="data border" id="createReservationBtn"><i class="far fa-plus-square"></i></div>
+                  <div class="data border" id="removeReservationBtn"><i class="fas fa-user-minus"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-container">
+              <div class="reservation-list-container border" id="c" onclick="openFilter()">
+                <i class="fas fa-search"></i>
+                <div class="reservation-list-item">Vartotojo paieška</div>
+              </div>
+            </div>
+          </div>
+          <div class="for-clients display-none" id="clientContentId">
+            <div class="">
+              <form class="" action="index.html" method="post">
+                <input type="text" name="clientName" placeholder="Vardas" value="" id="myName">
+                <input type="text" name="clientName" placeholder="Vardas" value="" id="mySurname">
+                <input placeholder="Pasirinkite rezervacijos dieną" class="dataPicker" type="text" id="selectDataClient">
+                <input class="timepicker" placeholder="pasirinkite laika" id="timepicker2" type="text">
+                <button class="submitBtn" type="button" name="button" id="registerButton">registruotis</button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="side-container display-none" id="includedContent">
+          <div class="registarion display-none" id="registarionId">
+            <form class="register-form" action="index.html" method="post">
+              <input type="text" name="clientName" placeholder="Vardas" value="" id="clientName">
+              <input type="text" name="clientSurname" value="" placeholder="Pavarde" id="clientSurname">
+              <input placeholder="Pasirinkite vizito dieną" class="dataPicker" type="text" id="datepicker">
+              <input class="timepicker" placeholder="pasirinkite laika" id="timepicker" type="text">
+              <button type="button" name="button" class="submitBtn" id="registerClient">Registuoti klient</button>
+            </form>
+          </div>
+          <div class="reservations display-none" id="reservationsId">
+            <form id="serchInData" class="display-none search-reservations-form" action="index.html" method="post">
+              <input placeholder="Pasirinkite rezervacijos dieną" class="dataPicker " type="text" id="selectData">
+              <button class="submitBtn" type="button" name="button" id="serchDateId">Ieškoti</button>
+            </form>
+
+            <ul id="listOfResevations" class="resevations-container">
+              <li></li>
+            </ul>
+
+          </div>
+          <div class="filter" id="filterId">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()" onclick="toggleDropdown()">
+            <div id="myfilter" class="filter-dropdown-content display-none">
+            </div>
+          </div>
+          <div class="removeReservation display-none" id="removeResevationId">
+            <p class="heading">Please select cklients name and surname for delete</p>
+            <ul id="allReservations" class="remove-reservation-list">
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="footer-container">
+  </footer>
+  <script type="text/javascript" src="main.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+  <script src="jquery.js"></script>
+
+</body>
+
+</html>
