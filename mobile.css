@@ -1,0 +1,49 @@
+@media only screen and (max-width: 600px) {
+  body{
+    background: #cccccc;;
+    margin: 0;
+    padding: 0;
+  }
+  .side-container{
+    width: 100%;
+    background-color: #ffffffc9;
+  }
+  .main-background {
+display: block; }
+.select-container{
+  width: 100%;
+  margin:0 auto;
+  background-color: #211f1fde;
+  height: 100%;
+}
+.reservation-list-container{
+  color: #cccccc;
+}
+.register-form {
+    padding: 10px 10px;
+}
+.side-container{
+      min-height: 250px;
+}
+.content-container{
+  display: block;
+}
+.remove-reservation-list li::after{
+  content: "remove";
+  text-align: center;
+padding: 0px;
+background-color: red;
+color: #fff;
+font-weight: bold;
+margin-left: 10px;
+font-size: 13px;
+}
+.title{
+width: 70%;
+align-items: center;
+
+}
+.main-background{
+  background-image: url(img/mobile.svg);
+}
+}

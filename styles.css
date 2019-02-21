@@ -1,0 +1,258 @@
+.body{
+}
+.main-background{
+  width: 100%;
+  background-image: url("img/bg.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-flex;
+align-items: center;
+}
+.content-container{
+  width:100%;
+  display: flex;
+}
+.search-reservations-form{
+padding: 20px 0;
+}
+.side-container{
+  overflow: scroll;
+  background-color: #fff;
+  width: 40%;
+  min-height: 350px;
+  max-height: 350px;
+  margin: -1px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 46px #2f2a5f70;
+  z-index: 1;
+}
+.registarion{
+  width: 100%;
+}
+.select-container{
+background-color:#fff;
+width: 40%;
+min-height: 330px;
+margin-left: 60px;
+border-radius: 2px;
+}
+.container{
+  display: grid;
+  font-family: 'Roboto', sans-serif;
+
+}
+.select-list{
+  width: 100%;
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-evenly;
+  padding: 0;
+
+}
+.for-hairdresser{
+  display: none;
+}
+.a-tag{
+  text-decoration: none;
+  color:  #6e1e0a;
+  font-weight: 700;
+}
+
+.select-list-item a:active{
+  color: #ff5c39;
+}
+.active{
+  color: #ff5c39;
+}
+.display-none{
+  display: none;
+}
+.display-block{
+  display: block;
+}
+.border{
+  border: 1px #b9a19c52 solid;
+
+}
+.dropdown-container{
+margin-bottom: 10px;
+position: relative;
+
+}
+.resevations-container{
+  list-style-type: none;
+}
+.resevations-container li{
+  margin-bottom: 10px;
+}
+.reservation-list-container{
+  width: 80%;
+  color: #0f3245;
+  padding: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+}
+.reservation-list-item{
+  margin-left: 15px;
+}
+.dropdown-content{
+  width: 80%;
+  color: #0f3245;
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow: 1px 1px 17px -1px #80808075;
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  background-color: white;
+  z-index: 1;
+}
+.title{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.data{
+  width: 40%;
+  height: 50px;
+  display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+}
+.data:hover,
+.select-data:hover{
+  color: #fe5d3a;
+  border: 1px #b9a19cad solid;
+
+}
+
+.select-data{
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.data-container{
+      display: flex;
+      justify-content: space-around;
+}
+.dataPicker{
+  z-index: 10;
+}
+input{
+  display: flex;
+  width: 80%;
+  color: #0f3245;
+  padding: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: 700;
+  border: 1px #b9a19c52 solid;
+  margin-bottom: 10px;
+}
+.submitBtn{
+  display: flex;
+  justify-content: center;
+  background-color:#ff5c39;
+  width: 40%;
+  color: #fff;
+  padding: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: 700;
+  border: 1px #b9a19c52 solid;
+  margin-bottom: 10px;
+}
+.register-form{
+  padding: 40px 10px;
+}
+.ui-timepicker-container.ui-timepicker-standard{
+       z-index:10 !important;
+}
+.dropbtn {
+  background-color: #ff5c39;
+  color: white;
+  font-weight: 700;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #ff5c39c2;
+}
+
+/* The search field */
+#myInput {
+  font-size: 16px;
+  border: none;
+  margin: 0;
+  border-bottom: 0;
+  width: 100%;
+  cursor: pointer;
+}
+#myInput:focus {outline: 3px solid #ddd;}
+.filter-dropdown-content{
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 10;
+  width: 100%;
+
+
+}
+.filter-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.filter-dropdown-content a:hover {background-color: #f1f1f1}
+.filter{
+  position: relative;
+  padding: 20px 0px;
+}
+.heading{
+  text-align: center;
+  color: #6e1e0a;
+  font-weight: 700;
+}
+.remove-reservation-list{
+  list-style-type: none;
+  padding: 10px;;
+  margin: 0;
+}
+.remove-reservation-list li{
+  margin-bottom: 20px;
+}
+.remove-reservation-list li::after{
+  content: "Pašalinti";
+  padding: 5px;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.freeTimeUl{
+  display: flex;
+    width: 80%;
+    color: #0f3245;
+    padding: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-weight: 700;
+    border: 1px #b9a19c52 solid;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
